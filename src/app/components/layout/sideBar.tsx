@@ -8,7 +8,7 @@ const SideBar = () => {
   const { setSideBar, sideBar } = useContext(AppContext);
   return (
     <div
-      className={` flex flex-col items-center justify-center h-screen min-w-60 w-1/3 shadow-xl  fixed top-0 ${
+      className={` lg:hidden flex flex-col items-center justify-center h-screen min-w-60 w-1/3 shadow-xl  fixed top-0 ${
         sideBar ? "right-0" : "right-[-100%]"
       } `}
     >

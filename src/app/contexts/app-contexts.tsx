@@ -11,14 +11,14 @@ type AppContextType  = {
 }
 
 export const AppContext = createContext<AppContextType>({
-  darkMode: false,
+  darkMode: true,
   setDarkMode: () => {},
   sideBar :false,
   setSideBar: () => {},
 });
 
 const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [sideBar, setSideBar] = useState(false);
 
   return (

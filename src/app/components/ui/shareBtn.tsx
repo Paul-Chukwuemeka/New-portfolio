@@ -11,7 +11,7 @@ const ShareBtn = () => {
         setIsSocials(false)
     }}
     >
-      <div className={`flex flex-col  gap-2 items-center`}>
+      <div className={`flex flex-col  gap-2 items-center text-primary`}>
         <div
           className={` ${isSocials ? "flex" : "hidden"} w-fit *:shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)] h-38  *:cursor-pointer flex-col justify-around *:rounded-full *:bg-white *:flex *:items-center *:justify-center *:w-10 *:h-10`}
         >
