@@ -3,6 +3,7 @@ import ThemeButton from "../ui/themeBtn";
 import { FaTimes } from "react-icons/fa";
 import { AppContext } from "../../contexts/app-contexts";
 import { useContext } from "react";
+import Link from "next/link";
 
 const SideBar = () => {
   const { setSideBar, sideBar } = useContext(AppContext);
@@ -15,17 +16,26 @@ const SideBar = () => {
       <button
         className="text-2xl absolute top-5 left-5 cursor-pointer active:scale-90"
         type="button"
+        aria-label="close sidebar"
         onClick={() => {
           setSideBar(false);
         }}
       >
         <FaTimes />
       </button>
-      <div className="list-none p-8 h-5/6 *:text-xl font-medium flex flex-col gap-10 items-center">
-        <li>About</li>
-        <li>Projects</li>
-        <li>Resume</li>
-        <li>Contact</li>
+      <div className="list-none p-8 h-5/6 *:text-xl *:cursor-pointer font-medium flex flex-col gap-10 items-center">
+        <Link href={"/"}>
+          <li>About</li>
+        </Link>
+        <Link href={"/resume"}>
+          <li>Resume</li>
+        </Link>
+        <Link href={"/work"}>
+          <li>Projects</li>
+        </Link>
+        <Link href={"/contact"}>
+          <li>Contact</li>
+        </Link>
         <ThemeButton />
       </div>
     </div>

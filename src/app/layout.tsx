@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import {Montserrat} from "next/font/google";
 import "./globals.css";
 import AppContextProvider from "./contexts/app-contexts";
 
@@ -7,13 +6,6 @@ export const metadata: Metadata = {
   title: "MaskedDev",
   description: "Paul Chukwuemeka's portfolio",
 };
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-  weight:["300","400","500","600","700","800","900"],
-})
-
 
 
 export default function RootLayout({
@@ -23,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${montserrat.className}}`}>
+      <body className={`antialiased font-Inter`}>
         <AppContextProvider>
           {children}
         </AppContextProvider>

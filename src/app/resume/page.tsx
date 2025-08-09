@@ -9,7 +9,7 @@ import { useContext } from "react";
 export default function Home() {
   const { darkMode } = useContext(AppContext);
   return (
-    <div className={`flex max-lg:flex-col h-fit min-h-screen duration-300 *:duration-300  ${darkMode ? "bg-dark *:bg-dark text-dark" : "bg-primary *:bg-primary text-primary"}`}>
+    <div className={`flex max-lg:flex-col h-fit min-h-screen   -300 *:  -300  ${darkMode ? "bg-dark *:bg-dark text-dark" : "bg-primary *:bg-primary text-primary"}`}>
       <div className="absolute top-10 right-10 max-lg:hidden">
         <ThemeButton />
       </div>

@@ -9,12 +9,12 @@ const NavBar = () => {
   const { setSideBar, darkMode } = useContext(AppContext);
   const pathName = usePathname();
   const childrenStyle =
-    "*:font-semibold *:cursor-pointer *:after:block *:after:content-[''] *:relative *:after:absolute *:after:left-0 *:after:bottom-0 *:after:duration-450 *:hover:after:w-full  *:after:w-0 *:after:h-0.5 ";
+    "*:font-semibold *:cursor-pointer   *:after:block *:after:content-[''] *:relative *:after:absolute *:after:left-0 *:after:bottom-0 *:after:  -450 *:hover:after:w-full  *:after:w-0 *:after:h-0.5 ";
   return (
-    <div className=" border-r-[2px] max-lg:border-none  max-lg:justify-between flex items-center justify-end max-lg:h-fit h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
+    <div className=" border-r-[2px]  max-lg:border-none  max-lg:justify-between flex items-center justify-end max-lg:h-fit h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
       <h1 className="text-2xl lg:hidden font-bold ">MaskedDev</h1>
       <nav
-        className={`list-none  duration-300 ${childrenStyle} max-lg:hidden h-4/5 min-h-160 ${
+        className={`list-none  ${childrenStyle} *:after:duration-300 max-lg:hidden h-4/5 min-h-160 ${
           darkMode ? "bg-dark *:after:bg-primary" : "bg-primary *:after:bg-dark"
         } max-h-200 flex flex-col  justify-center gap-20 items-center  translate-x-1/2 text-[15px]   *:rotate-270 `}
       >
@@ -80,6 +80,7 @@ const NavBar = () => {
         onClick={() => {
           setSideBar(true);
         }}
+        aria-label="sidebar button"
         type="button"
       >
         <HiMiniBars3BottomRight />
