@@ -13,10 +13,10 @@ const NavBar = () => {
   return (
     <div className=" border-r-[2px]  max-lg:border-none  max-lg:justify-between flex items-center justify-end max-lg:h-fit h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
       <h1 className="text-2xl lg:hidden font-bold ">MaskedDev</h1>
-      <nav
+      <ul
         className={`list-none  ${childrenStyle} *:after:duration-300 max-lg:hidden h-4/5 min-h-160 ${
           darkMode ? "bg-dark *:after:bg-primary" : "bg-primary *:after:bg-dark"
-        } max-h-200 flex flex-col  justify-center gap-20 items-center  translate-x-1/2 text-[15px]   *:rotate-270 `}
+        } max-h-200 flex flex-col  justify-center gap-20 items-center  translate-x-1/2 text-[14px]   *:rotate-270 `}
       >
         <Link href={"/"}>
           <li
@@ -30,6 +30,20 @@ const NavBar = () => {
             }`}
           >
             About
+          </li>
+        </Link>{" "}
+        <Link href={"/skills"}>
+          <li
+            className={`${
+              pathName == "/skills" &&
+              `${
+                darkMode
+                  ? "text-shadow-[0px_0px_10px] text-shadow-white"
+                  : "line-through"
+              }`
+            }`}
+          >
+            Skills
           </li>
         </Link>
         <Link href={"/resume"}>
@@ -46,10 +60,10 @@ const NavBar = () => {
             Resume
           </li>
         </Link>
-        <Link href={"/work"}>
+        <Link href={"/projects"}>
           <li
             className={`${
-              pathName == "/work" &&
+              pathName == "/projects" &&
               `${
                 darkMode
                   ? "text-shadow-[0px_0px_10px] text-shadow-white"
@@ -74,7 +88,7 @@ const NavBar = () => {
             Contact
           </li>
         </Link>
-      </nav>
+      </ul>
       <button
         className="text-3xl lg:hidden *:cursor-pointer"
         onClick={() => {

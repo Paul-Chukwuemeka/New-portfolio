@@ -23,21 +23,21 @@ const SideBar = () => {
       >
         <FaTimes />
       </button>
-      <div className="list-none p-8 h-5/6 *:text-xl *:cursor-pointer font-medium flex flex-col gap-10 items-center">
+      <ul className="list-none p-8 h-5/6 *:text-xl *:cursor-pointer font-medium flex flex-col gap-10 items-center">
         <Link href={"/"}>
           <li>About</li>
         </Link>
         <Link href={"/resume"}>
           <li>Resume</li>
         </Link>
-        <Link href={"/work"}>
+        <Link href={"/projects"}>
           <li>Projects</li>
         </Link>
         <Link href={"/contact"}>
           <li>Contact</li>
         </Link>
         <ThemeButton />
-      </div>
+      </ul>
     </div>
   );
 };

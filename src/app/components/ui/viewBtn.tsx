@@ -14,11 +14,11 @@ const ViewBtn = ({ message, link }: viewBtnProp) => {
       <button
         className={`${
           !darkMode ? "bg-dark text-dark" : "bg-primary text-primary"
-        } relative cursor-pointer z-50 w-40  h-15 border`}
+        } relative cursor-pointer z-50 w-45  h-13 border`}
       >
-        <p className="capitalize font-semibold text-lg">{message}</p>
+        <p className="capitalize text-lg">{message}</p>
       </button>
-      <div className="w-40 h-15 border-2 z-0 absolute left-2 delay-300 top-2 duration-300 "></div>
+      <div className="w-45 h-13 border-2 z-0 absolute left-2 delay-300 top-2 duration-300 "></div>
     </Link>
   );
 };

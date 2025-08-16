@@ -1,11 +1,11 @@
 "use client";
-import NavBar from "./components/layout/NavBar";
-import ShareBtn from "./components/ui/shareBtn";
-import SideBar from "./components/layout/sideBar";
-import ThemeButton from "./components/ui/themeBtn";
-import { AppContext } from "./contexts/app-contexts";
+import NavBar from "../components/layout/NavBar";
+import ShareBtn from "../components/ui/shareBtn";
+import SideBar from "../components/layout/sideBar";
+import ThemeButton from "../components/ui/themeBtn";
+import Main from "../components/skills/main"
+import { AppContext } from "../contexts/app-contexts";
 import { useContext } from "react";
-import Hero from "./components/about/hero";
 
 export default function Home() {
   const { darkMode } = useContext(AppContext);
@@ -21,8 +21,8 @@ export default function Home() {
         <ThemeButton />
       </div>
       <NavBar />
+      <Main/>
       <SideBar />
-      <Hero/>
       <ShareBtn />
     </div>
   );
