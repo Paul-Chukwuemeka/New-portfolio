@@ -11,7 +11,7 @@ export default function Home() {
   const { darkMode } = useContext(AppContext);
   return (
     <div
-      className={`flex max-lg:flex-col h-fit min-h-screen font-sans  ${
+      className={`flex max-lg:flex-col  h-fit min-h-screen font-sans  ${
         darkMode
           ? "bg-dark *:bg-dark text-dark"
           : "bg-primary *:bg-primary text-primary"

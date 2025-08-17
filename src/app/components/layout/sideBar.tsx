@@ -29,6 +29,9 @@ const SideBar = () => {
         </Link>
         <Link href={"/resume"}>
           <li>Resume</li>
+        </Link>{" "}
+        <Link href={"/skills"}>
+          <li>Skills</li>
         </Link>
         <Link href={"/projects"}>
           <li>Projects</li>

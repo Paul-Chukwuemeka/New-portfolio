@@ -10,15 +10,18 @@ type viewBtnProp = {
 const ViewBtn = ({ message, link }: viewBtnProp) => {
   const { darkMode } = useContext(AppContext);
   return (
-    <Link href={link} className="relative w-40 h-15 hover:*:top-0 hover:*:left-0 ">
+    <Link
+      href={link}
+      className="relative  w-40 h-12  hover:*:top-0 hover:*:left-0 "
+    >
       <button
         className={`${
-          !darkMode ? "bg-dark text-dark" : "bg-primary text-primary"
-        } relative cursor-pointer z-50 w-45  h-13 border`}
+          !darkMode ? "bg-dark  text-dark" : "bg-primary text-primary"
+        } relative cursor-pointer w-full h-full z-50 border`}
       >
-        <p className="capitalize text-lg">{message}</p>
+        <p className="capitalize text-md">{message}</p>
       </button>
-      <div className="w-45 h-13 border-2 z-0 absolute left-2 delay-300 top-2 duration-300 "></div>
+      <div className="border-2 w-full h-full z-0 absolute left-2 delay-300 top-2 duration-300 "></div>
     </Link>
   );
 };
