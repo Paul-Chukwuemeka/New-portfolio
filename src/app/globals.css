@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -6,18 +5,25 @@
   --background-color-dark: #0d0d0d;
   --color-primary: #0d0d0d;
   --color-dark: #f2f2f2;
-  --font-Inter: "Inter", sans-serif;
+  --animate-wiggle: wiggle 1s ease 2;
 }
 
-* {
-  font-family: "Inter", sans-serif;
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(5deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(-3deg) scale(1);
+  }
+  75% {
+    transform: rotate(5deg) scale(0.8);
+  }
 }
 
 *::selection {
   color: blue;
-}
-
-
-.animatext{
-  
 }

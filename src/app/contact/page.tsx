@@ -1,9 +1,9 @@
 "use client";
-import NavBar from "../components/layout/NavBar";
-import ShareBtn from "../components/ui/shareBtn";
-import SideBar from "../components/layout/sideBar";
-import ThemeButton from "../components/ui/themeBtn";
-import { AppContext } from "../contexts/app-contexts";
+import NavBar from "../../components/layout/NavBar";
+import ShareBtn from "../../components/ui/shareBtn";
+import Main from "@/components/features/contact/main";
+import ThemeButton from "../../components/ui/themeBtn";
+import { AppContext } from "../../contexts/app-contexts";
 import { useContext } from "react";
 
 export default function Home() {
@@ -14,10 +14,7 @@ export default function Home() {
         <ThemeButton />
       </div>
       <NavBar />
-      <SideBar />
-      <div className={`flex-1 `}>
-        <h1>hey</h1>
-      </div>
+      <Main/>
       <ShareBtn />
     </div>
   );

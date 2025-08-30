@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { AppContext } from "@/app/contexts/app-contexts";
+import { AppContext } from "@/contexts/app-contexts";
 
 type Strings = {
   header?: string;
@@ -68,7 +68,7 @@ const InitialDiv = () => {
                     darkMode ? "bg-primary text-primary" : "bg-dark text-dark"
                   } w-15 h-15 border flex items-center justify-center`}
                 >
-                  <p className="text-xl font-bold uppercase">{l}</p>
+                  <h2 className="text-xl font-bold uppercase">{l}</h2>
                 </div>
               ))}
           </div>
@@ -84,7 +84,7 @@ const InitialDiv = () => {
                     darkMode ? "bg-primary text-primary" : "bg-dark text-dark"
                   } w-15 h-15 border flex items-center justify-center`}
                 >
-                  <p className="text-xl uppercase font-bold">{l}</p>
+                  <h2 className="text-xl uppercase font-bold">{l}</h2>
                 </div>
               ))}
           </div>

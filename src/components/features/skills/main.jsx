@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ViewBtn from "../ui/viewBtn";
+import ViewBtn from "@/components/ui/viewBtn";
 import { SiTypescript, SiRedux, SiMongodb } from "react-icons/si";
 import {
   FaGitAlt,
@@ -12,7 +12,10 @@ import {
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { AppContext } from "@/app/contexts/app-contexts";
+import { AppContext } from "@/contexts/app-contexts";
+
+
+
 const Main = () => {
   const { darkMode } = useContext(AppContext);
   const tools = [
@@ -70,21 +73,19 @@ const Main = () => {
     },
   ];
   return (
-    <div className="flex-1 p-10 flex items-center justify-center">
-      <div className=" w-full max-w-4xl flex max-xl:flex-col gap-8 items-center justify-center">
+    <main className="flex-1 p-10 flex items-center justify-center">
+      <div className=" w-full max-w-5xl flex max-xl:flex-col gap-8 items-center justify-center">
         <div
-          className={`flex flex-col gap-6 items-center max-w-xl xl:items-start ${
+          className={`flex flex-col gap-6 items-center max-w-4xl max-xl:text-center w-full xl:items-start ${
             darkMode ? "text-[#999999]" : "text-[#585757]"
           } `}
         >
           <h1
-            className={`text-4xl ${
-              darkMode ? "text-dark" : "text-primary"
-            }  max-md:text-3xl  max-lg:leading-10 leading-12 font-semibold`}
+            className="text-5xl max-md:text-3xl max-lg:leading-11 leading-14 font-semibold max-lg:flex max-lg:flex-col max-lg:items-center"
           >
             My Skills & Tools
           </h1>
-          <p className="text-xl font-bold max-md:text-lg">
+          <p className="text-xl leading-8 max-lg:text-lg">
             While I focus on{" "}
             <span
               className={`font-semibold ${
@@ -141,16 +142,16 @@ const Main = () => {
           <div className=" my-2  flex gap-[15px_25px] items-center justify-center p-1 flex-wrap w-lg">
             {tools.map((tool, i) => {
               return (
-                <div className={`p-4 w-50 h-16 hover:scale-95  flex items-center justify-center gap-2 ${darkMode ?"bg-dark shadow-[0px_0px_5px_#2f2f2f]" : "bg-primary shadow-[0px_0px_20px_#dadada]"}`} key={i}>
+                <div className={`p-4 w-50 cursor-pointer h-16 hover:scale-95  flex items-center justify-center gap-2 ${darkMode ?"bg-dark shadow-[0px_0px_5px_#2f2f2f]" : "bg-primary shadow-[0px_0px_20px_#dadada]"}`} key={i}>
                   <span className="text-2xl">{tool.icon}</span>
-                  <p className="text-lg font-bold">{tool.language}</p>
+                  <h2 className="text-lg font-bold">{tool.language}</h2>
                 </div>
               );
             })}
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -6,10 +6,10 @@ import { useContext } from "react";
 import Link from "next/link";
 
 const SideBar = () => {
-  const { setSideBar, sideBar } = useContext(AppContext);
+  const { setSideBar, sideBar,darkMode } = useContext(AppContext);
   return (
-    <div
-      className={` lg:hidden flex flex-col items-center justify-center h-screen min-w-60 w-1/3 shadow-xl  fixed top-0 ${
+    <aside
+      className={` lg:hidden ${darkMode ? " bg-dark text-dark ": " bg-primary text-primary"} flex flex-col items-center justify-center h-screen min-w-60 w-1/3 shadow-xl z-100 fixed top-0 ${
         sideBar ? "right-0" : "right-[-100%]"
       } `}
     >
@@ -41,7 +41,7 @@ const SideBar = () => {
         </Link>
         <ThemeButton />
       </ul>
-    </div>
+    </aside>
   );
 };
 

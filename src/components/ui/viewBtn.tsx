@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { AppContext } from "@/app/contexts/app-contexts";
+import { AppContext } from "@/contexts/app-contexts";
 import { useContext } from "react";
 type viewBtnProp = {
   message: string;
@@ -19,7 +19,7 @@ const ViewBtn = ({ message, link }: viewBtnProp) => {
           !darkMode ? "bg-dark  text-dark" : "bg-primary text-primary"
         } relative cursor-pointer w-full h-full z-50 border`}
       >
-        <p className="capitalize text-md">{message}</p>
+        <p className="capitalize text-lg font-semibold">{message}</p>
       </button>
       <div className="border-2 w-full h-full z-0 absolute left-2 delay-300 top-2 duration-300 "></div>
     </Link>
