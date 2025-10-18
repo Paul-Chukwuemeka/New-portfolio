@@ -1,27 +1,28 @@
-"use client";
 import "./globals.css";
-import { spaceGrotesk } from "@/fonts";
-import { ViewTransitions } from "next-view-transitions";
-import AppContextProvider from "../contexts/app-contexts";
-import SideBar from "@/components/layout/sideBar";
+import Providers from "@/Providers";
+
+import { Red_Hat_Mono } from "next/font/google";
+
+const redHatMono = Red_Hat_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-red-hat-mono",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en">
-        <head>
-          <title>MaskedDev</title>
-        </head>
-        <body className={`subpixel-antialiased ${spaceGrotesk.className}`}>
-          <AppContextProvider>
-            <SideBar />
-            {children}
-          </AppContextProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${redHatMono.variable}`}
+    >
+      <body className="subpixel-antialiased font-red-hat">
+        <Providers>{children}</Providers>
+      </body>
+    </html>
   );
 }
