@@ -37,13 +37,13 @@ const Contact = () => {
             aria-label="message"
             className="border-2 h-30 overflow-auto p-4"
           ></textarea>
-          <div className="relative  w-full h-16  hover:*:top-0 hover:*:left-0 ">
+          <div className="relative  w-full h-16  hover:*:top-0 hover:*:right-0 hover:border-4 duration-500 ">
             <button
               className={` relative dark:bg-primary bg-dark dark:text-primary text-dark  w-full h-full z-10 border transition-all duration-500`}
             >
               <p className="capitalize font-semibold text-lg">Connect</p>
             </button>
-            <div className="border-2 w-full h-full -z-0 absolute left-2 top-2 transition-all duration-500"></div>
+            <div className="border-2 w-full h-full -z-0 absolute right-2 top-2 transition-all duration-500"></div>
           </div>
         </form>
       </div>
