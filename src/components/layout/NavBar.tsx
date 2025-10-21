@@ -12,8 +12,8 @@ const NavBar = () => {
   const pathName = usePathname();
 
   return (
-    <header className="border-r-[2px] sticky top-0 left-0 max-lg:border-none max-lg:justify-between flex items-center justify-end max-lg:h-fit h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
-      <h1 className="text-2xl lg:hidden font-bold ">MaskedDev</h1>
+    <header className="border-r-[2px] duration-500 sticky top-0 left-0 max-lg:border-none max-lg:justify-between flex items-center justify-end max-lg:h-fit max-lg:bg-primary dark:max-lg:bg-dark h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
+      <Link href={"/"} className="text-2xl lg:hidden font-bold ">MaskedDev</Link>
       <ul
         className="list-none
         font-semibold max-lg:hidden h-4/5 min-h-160

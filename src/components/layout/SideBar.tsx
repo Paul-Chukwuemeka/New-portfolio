@@ -14,11 +14,11 @@ const SideBar = () => {
     <div
       className={`${
         sideBar ? "w-screen" : "w-0"
-      } h-screen absolute left-0 top-0 z-100 `}
+      } h-full fixed left-0 top-0 z-100 `}
       onClick={() => setSideBar(false)}
     >
       <aside
-        className={` lg:hidden bg-primary text-primary dark:bg-dark dark:text-dark  flex flex-col items-center justify-center h-screen min-w-60 w-1/3 shadow-xl z-20 fixed top-0  duration-500 ${
+        className={` lg:hidden bg-primary text-primary dark:bg-dark dark:text-dark  flex flex-col items-center justify-center h-full min-w-60 w-1/3 shadow-xl z-20 fixed top-0  duration-500 ${
           sideBar ? "right-0" : "right-[-100%]"
         } `}
         onClick={(e) => e.stopPropagation()}

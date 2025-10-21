@@ -4,7 +4,7 @@ import { tools } from "@/Constant";
 const Skills = () => {
   return (
     <main className="flex-1 p-10 flex items-center justify-center">
-      <div className=" w-full max-w-5xl flex max-xl:flex-col gap-8 items-center justify-center">
+      <div className=" w-full  max-w-5xl flex max-xl:flex-col gap-8 items-center justify-center">
         <div
           className={`flex flex-col gap-6 items-center max-w-4xl max-xl:text-center w-full xl:items-start  `}
         >
@@ -22,23 +22,23 @@ const Skills = () => {
           </p>
           <ViewBtn />
         </div>
-        <div className="text-center">
+        <div className="text-center w-full flex flex-col items-center justify-center gap-2">
           <h1
             className={`text-2xl    max-lg:leading-10 leading-12 font-semibold`}
           >
             My Familar Tools Include:
           </h1>
-          <div className=" my-2  flex gap-[15px_25px] items-center justify-center p-1 flex-wrap w-lg">
+          <div className=" my-2  flex gap-[15px_25px] w-full max-w-xl items-center justify-center p-1 flex-wrap">
             {tools.map(({ language, icon: Icon }) => {
               return (
                 <span
-                  className={`p-4 w-50 border-2   h-16 hover:scale-95  flex items-center justify-center gap-2 transition-transform duration-500`}
+                  className={`p-4 w-50 border-2 max-md:w-40   h-16 hover:scale-95  flex items-center justify-center gap-2 transition-transform duration-500`}
                   key={language}
                 >
-                  <span className="text-2xl">
+                  <span className="text-2xl ">
                     <Icon />
                   </span>
-                  <h2 className="text-lg font-bold">{language}</h2>
+                  <h2 className="text-lg font-bold max-md:text-md">{language}</h2>
                 </span>
               );
             })}

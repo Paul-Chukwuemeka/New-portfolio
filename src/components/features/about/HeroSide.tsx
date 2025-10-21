@@ -23,7 +23,7 @@ const HeroSide = () => {
       className={`flex flex-col  justify-center items-center h-fit w-1/2 max-w-lg p-4 max-xl:hidden duration-500 gap-14 }`}
     >
       <div
-        className={`h-70 w-70 bg-dark dark:bg-primary text-dark dark:text-primary relative after:absolute after:h-70 after:w-70 after:duration-500 hover:after:top-0 hover:after:right-0 after:border-4  after:top-3.5  after:right-3.5 after:z-0 after:border-primary  dark:after:border-dark  flex items-center justify-center text-9xl font-bold `}
+        className={`h-70 w-70 bg-dark dark:bg-primary text-dark dark:text-primary relative after:absolute after:h-70 after:w-70 duration-500 after:duration-500 hover:after:top-0 hover:after:right-0 after:border-4  after:top-3.5  after:right-3.5 after:z-0 after:border-primary  dark:after:border-dark  flex items-center justify-center text-9xl font-bold `}
       >
         <span>{currentText.header}</span>
       </div>

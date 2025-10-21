@@ -7,7 +7,7 @@ import Link from "next/link";
 const ShareBtn = () => {
   const [isSocials, setIsSocials] = useState(false);
   return (
-    <div className="absolute z-10 text-black flex flex-col items-center duration-500 justify-center  bottom-10 right-10 ">
+    <div className="fixed z-10 text-black flex flex-col items-center duration-500 justify-center  bottom-10 right-10 ">
       <div
         className={`flex flex-col bg-transparent  gap-2 items-center text-primary`}
       >
