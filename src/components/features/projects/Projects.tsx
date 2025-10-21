@@ -5,10 +5,12 @@ import { projects } from "@/Constant";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
+import { useTheme } from "next-themes";
 
 const Projects = () => {
+  const { resolvedTheme } = useTheme();
   return (
-    <main className="flex-1 p-10 flex items-center overflow-y-auto justify-center">
+    <main className="flex-1 p-10 px-16 max-lg:px-10 flex items-center overflow-y-auto justify-center">
       <div className=" w-full max-w-5xl flex max-xl:flex-col lg:gap-20 gap-8 items-center justify-center">
         <div
           className={`flex flex-col gap-6 max-xl:text-center items-center max-w-4xl w-full xl:items-start `}
@@ -40,13 +42,15 @@ const Projects = () => {
                 className={`shadow-[0px_0px_10px]  dark:shadow-gray-600/80 shadow-gray-400  h-fit flex flex-col gap-1  w-full`}
               >
                 <Image
-                  src={project.image}
+                  src={
+                    resolvedTheme != "dark" ? project.image : project.imageDark
+                  }
                   width={1400}
                   height={500}
                   alt={project.name}
                   className="w-full rounded-inherit"
                 />
-                <div className="flex flex-col gap-1 p-3 py-2">
+                <div className="flex flex-col bg-primary text-primary duration-500 dark:text-dark dark:bg-dark gap-1 p-3 py-2">
                   <h2 className="font-semibold text-md">{project.name}</h2>
                   <p className="">{project.description}</p>
                   <p className="text">{project.tools.join(" + ")}</p>

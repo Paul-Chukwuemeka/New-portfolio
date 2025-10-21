@@ -40,7 +40,6 @@ const ShareBtn = () => {
           onClick={() => {
             setIsSocials(!isSocials);
           }}
-          onMouseOver={() => {}}
         >
           <FiShare2 />
         </button>

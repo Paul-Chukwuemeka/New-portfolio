@@ -30,6 +30,7 @@ const NavBar = () => {
             <Link
               key={i}
               href={link.url}
+              aria-current={isActive}
               className={`${
                 isActive && "line-through decoration-2"
               } after:block after:content-[''] relative cursor-pointer

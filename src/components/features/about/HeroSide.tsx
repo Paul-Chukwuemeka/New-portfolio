@@ -1,23 +1,14 @@
 import { useEffect, useState } from "react";
-
-const texts = [
-  {
-    header: "PC",
-    subtext: "Masked Dev",
-  },
-  {
-    header: "FS",
-    subtext: "Full Stack",
-  },
-];
+import { texts } from "@/Constant";
 
 const HeroSide = () => {
   const [current, setCurrent] = useState(0);
+  const rotationInterval = 8000;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % texts.length);
-    }, 8000);
+    }, rotationInterval);
 
     return () => {
       clearInterval(interval);

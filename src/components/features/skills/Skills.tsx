@@ -1,72 +1,7 @@
 import ViewBtn from "@/components/ui/ViewBtn";
-import { SiTypescript, SiRedux, SiMongodb } from "react-icons/si";
-import {
-  FaGitAlt,
-  FaHtml5,
-  FaJs,
-  FaCss3,
-  FaPython,
-  FaNode,
-  FaReact,
-} from "react-icons/fa";
-import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { tools } from "@/Constant";
 
 const Skills = () => {
-  const tools = [
-    {
-      language: "Typescript",
-      icon: <SiTypescript />,
-    },
-    {
-      language: "Redux",
-      icon: <SiRedux />,
-    },
-    {
-      language: "MongoDb",
-      icon: <SiMongodb />,
-    },
-    {
-      language: "Git",
-      icon: <FaGitAlt />,
-    },
-    {
-      language: "Html",
-      icon: <FaHtml5 />,
-    },
-    {
-      language: "Javascript",
-      icon: <FaJs />,
-    },
-    {
-      language: "Css",
-      icon: <FaCss3 />,
-    },
-    {
-      language: "Python",
-      icon: <FaPython />,
-    },
-    {
-      language: "Node Js",
-      icon: <FaNode />,
-    },
-    {
-      language: "NextJs",
-      icon: <RiNextjsLine />,
-    },
-    {
-      language: "TailWind",
-      icon: <RiTailwindCssFill />,
-    },
-    {
-      language: "React",
-      icon: <FaReact />,
-    },
-    {
-      language: "Postgres",
-      icon: <BiLogoPostgresql />,
-    },
-  ];
   return (
     <main className="flex-1 p-10 flex items-center justify-center">
       <div className=" w-full max-w-5xl flex max-xl:flex-col gap-8 items-center justify-center">
@@ -94,14 +29,16 @@ const Skills = () => {
             My Familar Tools Include:
           </h1>
           <div className=" my-2  flex gap-[15px_25px] items-center justify-center p-1 flex-wrap w-lg">
-            {tools.map((tool, i) => {
+            {tools.map(({ language, icon: Icon }) => {
               return (
                 <span
                   className={`p-4 w-50 border-2   h-16 hover:scale-95  flex items-center justify-center gap-2 transition-transform duration-500`}
-                  key={i}
+                  key={language}
                 >
-                  <span className="text-2xl">{tool.icon}</span>
-                  <h2 className="text-lg font-bold">{tool.language}</h2>
+                  <span className="text-2xl">
+                    <Icon />
+                  </span>
+                  <h2 className="text-lg font-bold">{language}</h2>
                 </span>
               );
             })}
