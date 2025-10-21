@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-email/render": "^1.4.0",
     "dompurify": "^3.3.0",
+    "isomorphic-dompurify": "^2.30.0",
     "lottie-react": "^2.4.1",
     "next": "^15.5.2",
     "next-themes": "^0.4.6",
