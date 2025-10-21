@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import ViewBtn from "../../ui/ViewBtn";
 import { projects } from "@/Constant";
@@ -9,6 +9,11 @@ import { useTheme } from "next-themes";
 
 const Projects = () => {
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <main className="flex-1 p-10 px-16 max-lg:px-10 flex items-center overflow-y-auto justify-center">
       <div className=" w-full max-w-5xl flex max-xl:flex-col lg:gap-20 gap-8 items-center justify-center">
@@ -36,6 +41,26 @@ const Projects = () => {
         </div>
         <div className="w-full scroll-smooth xl:overflow-y-auto xl:p-10 h-120 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 xl:w-220 gap-4 ">
           {projects.map((project, i) => {
+            if (!mounted) {
+              return (
+                <div
+                  key={project.name + i}
+                  className="w-full h-90  animate-pulse shadow-[0px_0px_10px]  dark:shadow-gray-600/80 shadow-gray-400 flex flex-col gap-1  "
+                >
+                  <div className="w-full h-52 bg-gray-300 dark:bg-gray-800 rounded-inherit "></div>
+                  <div className="flex flex-col bg-primary text-primary duration-500 dark:text-dark dark:bg-dark gap-1 p-3 py-2">
+                    <div className="h-6 bg-gray-300 dark:bg-gray-800 rounded w-3/4 mb-2"></div>
+                    <div className="h-4 bg-gray-300 dark:bg-gray-800 rounded w-full mb-1"></div>
+                    <div className="h-4 bg-gray-300 dark:bg-gray-800 rounded w-full mb-1"></div>
+                    <div className="h-4 bg-gray-300 dark:bg-gray-800 rounded w-1/2 mb-2"></div>
+                    <div className="flex gap-2">
+                      <div className="h-6 bg-gray-300 dark:bg-gray-800 rounded w-16"></div>
+                      <div className="h-6 bg-gray-300 dark:bg-gray-800 rounded w-16"></div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             return (
               <div
                 key={project.name + i}

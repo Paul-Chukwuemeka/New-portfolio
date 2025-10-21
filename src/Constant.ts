@@ -119,8 +119,8 @@ export const projects: Project[] = [
   {
     name: "Kanban app",
     description: "A kanban app with drag and drop functionality",
-    image: kanbanDark,
-    imageDark: kanbanLight,
+    image:kanbanLight ,
+    imageDark: kanbanDark,
     git: "https://github.com/Paul-Chukwuemeka/kanban",
     live: "https://kanban-dbs5jyn8d-paul-chukwuemekas-projects.vercel.app/",
     tools: ["Tailwind", "NextJs", "TypeScript"],
