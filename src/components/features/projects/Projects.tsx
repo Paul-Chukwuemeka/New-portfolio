@@ -48,6 +48,7 @@ const Projects = () => {
                   width={1400}
                   height={500}
                   alt={project.name}
+                  placeholder="blur"
                   className="w-full rounded-inherit"
                 />
                 <div className="flex flex-col bg-primary text-primary duration-500 dark:text-dark dark:bg-dark gap-1 p-3 py-2">

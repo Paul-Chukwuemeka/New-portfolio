@@ -11,6 +11,9 @@ import {
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
+import kanbanLight from "../public/kanban-light.png"
+import kanbanDark from "../public/kanban-dark.png"
+import { StaticImageData } from "next/image";
 
 export const navLinks = [
   {
@@ -105,8 +108,8 @@ export const tools: Tool[] = [
 type Project = {
   name: string;
   description: string;
-  image: string;
-  imageDark: string;
+  image: StaticImageData;
+  imageDark: StaticImageData;
   git: string;
   live: string;
   tools: string[];
@@ -116,8 +119,8 @@ export const projects: Project[] = [
   {
     name: "Kanban app",
     description: "A kanban app with drag and drop functionality",
-    image: "/kanban-light.png",
-    imageDark: "/kanban-dark.png",
+    image: kanbanDark,
+    imageDark: kanbanLight,
     git: "https://github.com/Paul-Chukwuemeka/kanban",
     live: "https://kanban-dbs5jyn8d-paul-chukwuemekas-projects.vercel.app/",
     tools: ["Tailwind", "NextJs", "TypeScript"],
