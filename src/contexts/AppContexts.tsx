@@ -9,11 +9,7 @@ type AppContextType = {
 
 export const AppContext = createContext<AppContextType>({
   sideBar: false,
-  setSideBar: () => {
-    throw new Error(
-      "setSideBar function must be used within an AppContextProvider"
-    );
-  },
+  setSideBar: () => {},
 });
 
 const AppContextProvider = ({ children }: { children: React.ReactNode }) => {

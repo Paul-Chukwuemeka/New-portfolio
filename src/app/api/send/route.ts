@@ -4,12 +4,17 @@ import { Resend } from "resend";
 import DOMPurify from "isomorphic-dompurify";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const RESEND_TO_EMAIL = process.env.RESEND_TO_EMAIL;
+const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL;
 
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
 
   if (!name || !email || !message) {
-    return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing required fields" },
+      { status: 400 }
+    );
   }
 
   const sanitizedName = DOMPurify.sanitize(name);
@@ -17,8 +22,8 @@ export async function POST(req: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: ["paulchukwuemeka22@gmail.com"],
+      from: RESEND_FROM_EMAIL!,
+      to: [RESEND_TO_EMAIL!],
       subject: "Contact from portfolio",
       react: EmailTemplate({
         name: sanitizedName,

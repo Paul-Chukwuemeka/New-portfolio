@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <main className="flex-1 p-10 flex items-center justify-center">
-      {completed && <Completed />}
+      {completed && <Completed  setCompleted={setCompleted} />}
       <div className="w-full max-lg:max-w-xl max-w-5xl flex max-xl:flex-col gap-8 items-center justify-center">
         <div className={`flex flex-col max-w-xl gap-4 max-lg:text-center   `}>
           <h2 className="text-5xl max-md:text-3xl max-lg:leading-11 leading-15 font-semibold max-lg:flex max-lg:flex-col max-lg:items-center">
@@ -109,7 +109,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      {error && <ErrorComponent />}
+      {error && <ErrorComponent setError={setError} />}
     </main>
   );
 };
