@@ -11,8 +11,10 @@ import {
 } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
-import kanbanLight from "../public/kanban-light.png"
-import kanbanDark from "../public/kanban-dark.png"
+import kanbanLight from "../public/kanban-light.png";
+import kanbanDark from "../public/kanban-dark.png";
+import portfolioLight from "../public/portfolio-light.png";
+import portfolioDark from "../public/portfolio-dark.png";
 import { StaticImageData } from "next/image";
 
 export const navLinks = [
@@ -119,10 +121,19 @@ export const projects: Project[] = [
   {
     name: "Kanban app",
     description: "A kanban app with drag and drop functionality",
-    image:kanbanLight ,
+    image: kanbanLight,
     imageDark: kanbanDark,
     git: "https://github.com/Paul-Chukwuemeka/kanban",
     live: "https://kanban-dbs5jyn8d-paul-chukwuemekas-projects.vercel.app/",
     tools: ["Tailwind", "NextJs", "TypeScript"],
+  },
+  {
+    name: "Portfolio",
+    description: "My Portfolio app",
+    image: portfolioLight,
+    imageDark: portfolioDark,
+    git: "https://github.com/Paul-Chukwuemeka/New-portfolio",
+    live: "https://maskeddev.vercel.app/",
+    tools: ["Tailwind", "NextJs", "TypeScript", "Next-Themes"],
   },
 ];
