@@ -35,7 +35,7 @@ const Projects = () => {
             well as my ability to{" "}
             <span className={`font-semibold `}>learn</span>,{" "}
             <span className={`font-semibold `}>adapt</span>, and{" "}
-            <span className={`font-semibold `}>deliver results</span> .
+            <span className={`font-semibold `}>deliver results</span>.
           </p>
           <ViewBtn />
         </div>
