@@ -15,6 +15,7 @@ import kanbanLight from "../public/kanban-light.png";
 import kanbanDark from "../public/kanban-dark.png";
 import portfolioLight from "../public/portfolio-light.png";
 import portfolioDark from "../public/portfolio-dark.png";
+import fixxir from "../public/fixxir.png";
 import { StaticImageData } from "next/image";
 
 export const navLinks = [
@@ -135,5 +136,14 @@ export const projects: Project[] = [
     git: "https://github.com/Paul-Chukwuemeka/New-portfolio",
     live: "https://maskeddev.vercel.app/",
     tools: ["Tailwind", "NextJs", "TypeScript", "Next-Themes"],
+  },
+  {
+    name: "Fixxir",
+    description: "A website for managing tech repairs",
+    image: fixxir,
+    imageDark: fixxir,
+    git: "https://github.com/Paul-Chukwuemeka/fixxir-web-app",
+    live: "https://fixxir.com",
+    tools: ["Tailwind", "NextJs", "TypeScript"],
   },
 ];
