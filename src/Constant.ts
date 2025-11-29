@@ -124,7 +124,7 @@ export const projects: Project[] = [
     image: kanbanLight,
     imageDark: kanbanDark,
     git: "https://github.com/Paul-Chukwuemeka/kanban",
-    live: "https://kanban-dbs5jyn8d-paul-chukwuemekas-projects.vercel.app/",
+    live: "https://kanban-steel-two.vercel.app/",
     tools: ["Tailwind", "NextJs", "TypeScript"],
   },
   {
