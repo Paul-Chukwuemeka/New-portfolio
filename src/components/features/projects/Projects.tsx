@@ -64,7 +64,7 @@ const Projects = () => {
             return (
               <div
                 key={project.name + i}
-                className={`shadow-[0px_0px_10px]  dark:shadow-gray-600/80 shadow-gray-400  h-fit flex flex-col gap-1  w-full`}
+                className={`shadow-[0px_0px_10px]  dark:shadow-gray-500/70 shadow-gray-400  h-fit flex flex-col gap-1  w-full`}
               >
                 <Image
                   src={
