@@ -16,6 +16,7 @@ import kanbanDark from "../public/kanban-dark.png";
 import portfolioLight from "../public/portfolio-light.png";
 import portfolioDark from "../public/portfolio-dark.png";
 import fixxir from "../public/fixxir.png";
+import ademount from "../public/ademount.png";
 import { StaticImageData } from "next/image";
 
 export const navLinks = [
@@ -146,4 +147,13 @@ export const projects: Project[] = [
     live: "https://fixxir.com",
     tools: ["Tailwind", "NextJs", "TypeScript"],
   },
+  {
+    name: "Ademount Engineering",
+    description:"",
+    image: ademount,
+    imageDark: ademount,
+    git: "https://github.com/code-x-ng/ademount-website",
+    live:"https://www.ademountengineering.com/",
+    tools:["Tailwind", "NextJs", "TypeScript","Google maps"]
+  }
 ];
