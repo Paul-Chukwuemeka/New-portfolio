@@ -24,7 +24,7 @@ const SideBar = () => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="text-2xl absolute top-5 left-5   active:scale-90 transition-transform duration-500"
+          className="text-2xl cursor-pointer absolute top-5 left-5   active:scale-90 transition-transform duration-500"
           type="button"
           aria-label="close sidebar"
           onClick={() => {
