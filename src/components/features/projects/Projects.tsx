@@ -39,7 +39,7 @@ const Projects = () => {
           </p>
           <ViewBtn />
         </div>
-        <div className="w-full scroll-smooth xl:overflow-y-auto xl:p-10 h-fit lg:h-140 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 xl:w-300 gap-4 lg:gap-10">
+        <div className="w-full scroll-smooth xl:overflow-y-auto xl:p-10 h-fit xl:h-140  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 xl:w-300 gap-4 xl:gap-10">
           {projects.map((project, i) => {
             if (!mounted) {
               return (
@@ -64,7 +64,7 @@ const Projects = () => {
             return (
               <div
                 key={project.name + i}
-                className={`shadow-[0px_0px_10px] h-90 dark:shadow-gray-500/70 shadow-gray-400 flex flex-col gap-1  w-full`}
+                className={` h-110 shadow flex flex-col gap-1  w-full`}
               >
                 <Image
                   src={
@@ -75,7 +75,7 @@ const Projects = () => {
                   alt={project.name}
                   className="w-full h-2/3 rounded-inherit"
                 />
-                <div className="flex flex-col bg-primary text-primary duration-500 dark:text-dark dark:bg-dark gap-1 p-3 py-2">
+                <div className="flex flex-col flex-1 bg-primary text-primary duration-500 dark:text-dark dark:bg-gray-950 gap-1 p-3 py-2">
                   <h2 className="font-semibold text-md">{project.name}</h2>
                   <p className="">{project.description}</p>
                   <p className="text">{project.tools.join(" + ")}</p>
