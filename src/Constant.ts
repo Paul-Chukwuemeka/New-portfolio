@@ -17,6 +17,7 @@ import portfolioLight from "../public/portfolio-light.png";
 import portfolioDark from "../public/portfolio-dark.png";
 import fixxir from "../public/fixxir.png";
 import ademount from "../public/ademount.png";
+import moodTracker from "../public/Mood_tracker.png";
 import { StaticImageData } from "next/image";
 
 export const navLinks = [
@@ -149,11 +150,27 @@ export const projects: Project[] = [
   },
   {
     name: "Ademount Engineering",
-    description:"",
+    description: "",
     image: ademount,
     imageDark: ademount,
     git: "https://github.com/code-x-ng/ademount-website",
-    live:"https://www.ademountengineering.com/",
-    tools:["Tailwind", "NextJs", "TypeScript","Google maps"]
-  }
+    live: "https://www.ademountengineering.com/",
+    tools: ["Tailwind", "NextJs", "TypeScript", "Google maps"],
+  },
+  {
+    name: "Mood Tracker",
+    description: "",
+    image: moodTracker,
+    imageDark: moodTracker,
+    git: "https://github.com/Paul-Chukwuemeka/mood_tracker",
+    live: "https://daily-mood-tracker-tau.vercel.app/",
+    tools: [
+      "Tailwind",
+      "NextJs",
+      "TypeScript",
+      "Supabase",
+      "Postgres",
+      "NextAuth",
+    ],
+  },
 ];
