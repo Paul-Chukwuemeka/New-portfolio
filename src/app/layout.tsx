@@ -1,6 +1,7 @@
 import "./globals.css";
 import Providers from "@/Providers";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 
 import { Red_Hat_Mono } from "next/font/google";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${redHatMono.variable}`}
     >
+      <Analytics/>
       <body className="subpixel-antialiased font-red-hat">
         <Providers>{children}</Providers>
       </body>
