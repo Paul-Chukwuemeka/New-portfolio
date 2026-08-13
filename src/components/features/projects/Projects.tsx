@@ -16,7 +16,7 @@ const Projects = () => {
 
   return (
     <main className="flex-1 p-10 px-16 max-lg:px-10 flex items-center overflow-y-auto justify-center">
-      <div className=" w-full max-w-5xl flex max-xl:flex-col lg:gap-20 gap-8 items-center justify-center">
+      <div className=" w-full max-w-7xl flex max-xl:flex-col lg:gap-20 gap-8 items-center justify-center">
         <div
           className={`flex flex-col gap-6 max-xl:text-center items-center max-w-4xl w-full xl:items-start `}
         >
