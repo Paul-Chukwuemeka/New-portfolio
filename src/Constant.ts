@@ -15,6 +15,8 @@ import kanbanLight from "../public/kanban-light.png";
 import kanbanDark from "../public/kanban-dark.png";
 import portfolioLight from "../public/portfolio-light.png";
 import portfolioDark from "../public/portfolio-dark.png";
+import linkForgeLight from "../public/linkforge_light.png";
+import linkForgeDark from "../public/linkforge_dark.png";
 import fixxir from "../public/fixxir.png";
 import ademount from "../public/ademount.png";
 import moodTracker from "../public/Mood_tracker.png";
@@ -132,7 +134,8 @@ export const projects: Project[] = [
   },
   {
     name: "Portfolio",
-    description: "My Portfolio app",
+    description:
+      "My personal portfolio site showcasing my skills, projects, and how to reach me",
     image: portfolioLight,
     imageDark: portfolioDark,
     git: "https://github.com/Paul-Chukwuemeka/New-portfolio",
@@ -141,7 +144,8 @@ export const projects: Project[] = [
   },
   {
     name: "Fixxir",
-    description: "A website for managing tech repairs",
+    description:
+      "A platform for managing tech repair requests through the full workflow",
     image: fixxir,
     imageDark: fixxir,
     git: "https://github.com/Paul-Chukwuemeka/fixxir-web-app",
@@ -150,7 +154,8 @@ export const projects: Project[] = [
   },
   {
     name: "Ademount Engineering",
-    description: "",
+    description:
+      "A corporate website for a civil and building engineering firm showcasing their services and projects",
     image: ademount,
     imageDark: ademount,
     git: "https://github.com/code-x-ng/ademount-website",
@@ -159,11 +164,29 @@ export const projects: Project[] = [
   },
   {
     name: "Mood Tracker",
-    description: "",
+    description:
+      "A mood tracker app for logging daily moods, getting personalized advice, and visualizing trends over time",
     image: moodTracker,
     imageDark: moodTracker,
     git: "https://github.com/Paul-Chukwuemeka/mood_tracker",
     live: "https://daily-mood-tracker-tau.vercel.app/",
+    tools: [
+      "Tailwind",
+      "NextJs",
+      "TypeScript",
+      "Supabase",
+      "Postgres",
+      "NextAuth",
+    ],
+  },
+  {
+    name: "LinkForge",
+    description:
+      "A link-in-bio builder for creating, styling, and sharing customizable profile cards",
+    image: linkForgeLight,
+    imageDark: linkForgeDark,
+    git: "https://github.com/Paul-Chukwuemeka/linkdrop",
+    live: "https://linkdrop-five.vercel.app/",
     tools: [
       "Tailwind",
       "NextJs",
