@@ -19,8 +19,8 @@ const ThemeBtn = () => {
       }
       className=" outline-none text-2xl cursor-pointer 
       active:scale-90 duration-500 max-md:text-lg w-10 
-      flex items-center justify-center h-10 p-2 shadow-[0_0_10px]
-    shadow-gray-400 dark:shadow-gray-300/25 rounded-full -rotate-z-15 transition-transform"
+      flex items-center justify-center h-10 p-2 shadow-lg
+     rounded-full -rotate-z-15 transition-transform"
     >
       {resolvedTheme == "dark" ? <FaMoon /> : <FaSun />}
     </button>
