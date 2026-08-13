@@ -1,53 +1,37 @@
-import React, { useState, useTransition } from "react";
-import Completed from "@/components/ui/Completed";
-import ErrorComponent from "@/components/ui/Error";
+import React from "react";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+
+const contacts = [
+  {
+    label: "Email",
+    value: "paulchukwuemeka22@gmail.com",
+    href: "mailto:paulchukwuemeka22@gmail.com",
+    icon: FaEnvelope,
+  },
+  {
+    label: "Phone",
+    value: "+234 704 327 5525",
+    href: "tel:+2347043275525",
+    icon: FaPhone,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/Paul-Chukwuemeka",
+    href: "https://github.com/Paul-Chukwuemeka",
+    icon: FaGithub,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/paulchukwuemeka",
+    href: "https://www.linkedin.com/in/paulchukwuemeka/",
+    icon: FaLinkedin,
+  },
+];
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [completed, setCompleted] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
-  const [isPending, startTransition] = useTransition();
-
-  async function handleSendMail() {
-    setError(false);
-    setCompleted(false);
-
-    startTransition(async () => {
-      try {
-        const res = await fetch("/api/send", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            message,
-          }),
-        });
-
-        if (!res.ok) {
-          throw new Error("Failed to send message");
-        }
-
-        const data = await res.json();
-        console.log(data);
-        setCompleted(true);
-        setName("");
-        setEmail("");
-        setMessage("");
-      } catch (error) {
-        setError(true);
-        console.error(error);
-      }
-    });
-  }
-
   return (
     <main className="flex-1 p-10 flex items-center justify-center">
-      {completed && <Completed  setCompleted={setCompleted} />}
       <div className="w-full max-lg:max-w-xl max-w-5xl flex max-xl:flex-col gap-8 items-center justify-center">
         <div className={`flex flex-col max-w-xl gap-4 max-lg:text-center   `}>
           <h2 className="text-5xl max-md:text-3xl max-lg:leading-11 leading-15 font-semibold max-lg:flex max-lg:flex-col max-lg:items-center">
@@ -63,53 +47,28 @@ const Contact = () => {
             fullstack web development jobs.
           </p>
         </div>
-        <form
-          className=" gap-4 p-4 max-w-xl flex flex-col w-full"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSendMail();
-          }}
-        >
-          <input
-            type="text"
-            className="border-2 h-16 p-4"
-            placeholder="Enter your name"
-            aria-label="name input"
-            required
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            className="border-2 h-16 p-4"
-            placeholder="Enter your email address"
-            aria-label="email input"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <textarea
-            name="message"
-            placeholder="Write your Message"
-            aria-label="message"
-            className="border-2 h-30 overflow-auto p-4"
-            required
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
-          <div className="relative  w-full h-16  hover:*:top-0 hover:*:right-0 hover:border-4 duration-500 ">
-            <button
-              className={` relative dark:bg-primary bg-dark dark:text-primary text-dark  w-full h-full z-10 border transition-all duration-500`}
+        <div className="w-full max-w-xl flex flex-col gap-4 p-4">
+          {contacts.map(({ label, value, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={
+                href.startsWith("http") ? "noopener noreferrer" : undefined
+              }
+              className="border-2 h-16 p-4 flex items-center gap-4 hover:border-4 hover:scale-95 transition-all duration-500"
             >
-              <p className="capitalize font-semibold text-lg">
-                {isPending ? "Sending..." : "Connect"}
-              </p>
-            </button>
-            <div className="border-2 w-full h-full -z-0 absolute right-1.5 top-1.5 transition-all duration-500"></div>
-          </div>
-        </form>
+              <span className="text-2xl">
+                <Icon />
+              </span>
+              <span className="flex flex-col">
+                <span className="font-semibold">{label}</span>
+                <span className="text-sm">{value}</span>
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
-      {error && <ErrorComponent setError={setError} />}
     </main>
   );
 };
