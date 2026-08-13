@@ -7,7 +7,7 @@ const ViewBtn = () => {
       href={
         "https://docs.google.com/document/d/12PkW0gzVAQnKry4aw65zL8x-iwpT1Kd4FcWwMJXgpe0/edit?usp=sharing"
       }
-      className="relative z-10  w-40 h-12 hover:*:top-0 hover:*:right-0 cursor-pointer duration-500  bg-dark text-dark dark:bg-primary dark:text-primary capitalize text-lg flex items-center justify-center font-semibold"
+      className="relative z-10  w-40 h-12 hover:*:top-0 hover:*:right-0 cursor-pointer transition-colors duration-500  bg-dark text-dark dark:bg-primary dark:text-primary capitalize text-lg flex items-center justify-center font-semibold"
       target="_blank"
       rel="noopener noreferrer"
     >

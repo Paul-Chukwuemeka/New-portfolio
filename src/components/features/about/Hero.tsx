@@ -6,10 +6,10 @@ const Hero = () => {
   const highlight = "dark:text-white text-black   font-semibold";
 
   return (
-    <main className="flex-1 flex items-center text-black/600 dark:text-white/80 justify-center p-20 max-md:p-10 gap-10">
-      <div className="flex flex-col gap-8  max-lg:items-center">
-        <div className={`flex flex-col gap-10 max-md:gap-4  max-w-xl max-lg:text-center `}>
-          <h1 className="text-5xl  max-md:text-5xl max-sm:text-4xl max-lg:leading-11 leading-16 font-semibold max-lg:flex max-lg:flex-col max-lg:items-center">
+    <main className="flex-1 flex items-center text-black/600 dark:text-white/80 justify-center p-20 max-md:p-10 gap-10 transition-colors duration-500">
+      <div className="flex flex-col gap-8  max-lg:items-center transition-colors duration-500">
+        <div className={`flex flex-col gap-10 max-md:gap-4  max-w-xl max-lg:text-center transition-colors duration-500`}>
+          <h1 className="text-5xl  max-md:text-5xl max-sm:text-4xl max-lg:leading-11 leading-16 font-semibold max-lg:flex max-lg:flex-col max-lg:items-center transition-colors duration-500">
             Hello, I&apos;m <br />
             <span
               className={
@@ -20,7 +20,7 @@ const Hero = () => {
               Paul Chukwuemeka
             </span>
           </h1>
-          <p className="text-xl leading-8 max-lg:text-[16px]">
+          <p className="text-xl leading-8 max-lg:text-[16px] transition-colors duration-500">
             I&apos;m a<span className={highlight}> full-stack developer</span>{" "}
             who builds websites that are
             <span className={highlight}> easy to use</span> and

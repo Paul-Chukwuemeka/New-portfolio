@@ -48,7 +48,7 @@ const Projects = () => {
                   className="w-full h-90  animate-pulse shadow-[0px_0px_10px]  dark:shadow-gray-600/80 shadow-gray-400 flex flex-col gap-1  "
                 >
                   <div className="w-full h-52 bg-gray-300 dark:bg-gray-800 rounded-inherit "></div>
-                  <div className="flex flex-col bg-primary text-primary duration-500 dark:text-dark dark:bg-dark gap-1 p-3 py-2">
+                  <div className="flex flex-col bg-primary text-primary transition-colors duration-500 dark:text-dark dark:bg-dark gap-1 p-3 py-2">
                     <div className="h-6 bg-gray-300 dark:bg-gray-800 rounded w-3/4 mb-2"></div>
                     <div className="h-4 bg-gray-300 dark:bg-gray-800 rounded w-full mb-1"></div>
                     <div className="h-4 bg-gray-300 dark:bg-gray-800 rounded w-full mb-1"></div>
@@ -75,7 +75,7 @@ const Projects = () => {
                   alt={project.name}
                   className="w-full h-2/3 rounded-inherit"
                 />
-                <div className="flex flex-col flex-1 bg-primary text-primary duration-500 dark:text-dark dark:bg-gray-950 gap-1 p-3 py-2">
+                <div className="flex flex-col flex-1 bg-primary text-primary transition-colors duration-500 dark:text-dark dark:bg-gray-950 gap-1 p-3 py-2">
                   <h2 className="font-semibold text-md">{project.name}</h2>
                   <p className="">{project.description}</p>
                   <p className="text">{project.tools.join(" + ")}</p>

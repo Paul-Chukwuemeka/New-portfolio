@@ -13,7 +13,7 @@ const Completed = ({
       onClick={() => setCompleted(false)}
     >
       <div
-        className=" bg-primary p-4 w-full max-lg:w-90  h-85 max-w-2xl rounded-lg dark:bg-dark flex-col gap-4 shadow-[0px_0px_10px] text-center duration-500 shadow-gray-400 dark:shadow-gray-600 dark:text-dark text-primary fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-start "
+        className=" bg-primary p-4 w-full max-lg:w-90  h-85 max-w-2xl rounded-lg dark:bg-dark flex-col gap-4 shadow-[0px_0px_10px] text-center transition-colors duration-500 shadow-gray-400 dark:shadow-gray-600 dark:text-dark text-primary fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-start "
         onClick={(e) => e.stopPropagation()}
       >
         <h1 className="text-xl max-lg:text-lg font-semibold">

@@ -12,7 +12,7 @@ const NavBar = () => {
   const pathName = usePathname();
 
   return (
-    <header className="border-r-[2px] duration-500 sticky top-0 left-0 max-lg:border-none max-lg:justify-between flex items-center z-50 justify-end max-lg:h-fit max-lg:bg-primary dark:max-lg:bg-dark h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
+    <header className="border-r-[2px] transition-colors duration-500 sticky top-0 left-0 max-lg:border-none max-lg:justify-between flex items-center z-50 justify-end max-lg:h-fit max-lg:bg-primary dark:max-lg:bg-dark h-screen w-14 max-lg:w-full max-lg:p-5 max-lg:px-6">
       <Link href={"/"} className="text-2xl lg:hidden font-bold ">MaskedDev</Link>
       <ul
         className="list-none
@@ -21,7 +21,7 @@ const NavBar = () => {
         justify-center gap-20 items-center
         translate-x-1/2 text-[15px]
         dark:bg-dark bg-primary
-        duration-500 
+        transition-colors duration-500 
         "
       >
         {navLinks.map((link, i) => {

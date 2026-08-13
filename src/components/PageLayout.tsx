@@ -15,7 +15,7 @@ const PageWrapper = ({ children }: { children: ReactNode }) => {
     setSideBar(false);
   }, [setSideBar]);
   return (
-    <div className="flex max-lg:flex-col duration-500 w-full h-fit min-h-screen dark:bg-dark bg-primary ">
+    <div className="flex max-lg:flex-col w-full h-fit min-h-screen transition-colors duration-500 dark:bg-dark bg-primary">
       <SideBar />
       <NavBar />
       <div className="absolute top-10 right-10 max-lg:hidden">

@@ -8,7 +8,7 @@ const Error = ({
 }) => {
   return (
     <div
-      className="bg-white dark:bg-dark fixed bottom-5 justify-start right-5 w-100 left-5 rounded-lg shadow-lg max-lg:w-85  h-20 flex items-center"
+      className="bg-white dark:bg-dark fixed bottom-5 justify-start right-5 w-100 left-5 rounded-lg shadow-lg max-lg:w-85  h-20 flex items-center transition-colors duration-500"
       onClick={() => setError(false)}
     >
       <Lottie
